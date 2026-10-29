@@ -1,0 +1,28 @@
+# Середовище
+# UTC: 2026-10-07T18:06:44Z
+
+$ (Get-CimInstance Win32_OperatingSystem).Caption, Version
+Майкрософт Windows 11 Pro | build 10.0.26300 | 64-bit
+
+$ claude --version
+2.1.210 (Claude Code)
+$ where claude
+/c/Users/Alexis/.local/bin/claude
+
+$ git --version
+git version 2.45.1.windows.1
+$ bash --version | head -1
+GNU bash, version 5.2.26(1)-release (x86_64-pc-msys)
+$ python --version
+Python 3.14.7
+$ node --version
+v22.23.1
+$ curl --version | head -1
+curl 8.7.1 (x86_64-w64-mingw32) libcurl/8.7.1 Schannel zlib/1.3.1 brotli/1.1.0 zstd/1.5.6 libidn2/2.3.7 libpsl/0.21.5 libssh2/1.11.0
+$ jq --version
+/usr/bin/bash: line 1: jq: command not found
+jq: не встановлено (потрібен лише для частини скриптів smixs/osint-skill)
+
+$ ls .claude/skills
+company-domain-check
+osint

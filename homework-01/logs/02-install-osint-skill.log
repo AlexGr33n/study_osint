@@ -1,0 +1,43 @@
+# Підключення smixs/osint-skill до Claude Code (project scope)
+# UTC: 2026-10-07T17:54:16Z
+
+$ git clone --depth 1 https://github.com/smixs/osint-skill.git
+commit: 94f382e26ecb8499f3749baf6e0d0b0248709dbf  (2026-03-10 10:18:28 +0500)  feat: OSINT skill v3.2 — early beta release
+
+$ cp -r osint-skill/osint .claude/skills/osint
+
+$ find .claude/skills/osint -type f | sort
+.claude/skills/osint/SKILL.md
+.claude/skills/osint/assets/dossier-template.md
+.claude/skills/osint/references/content-extraction.md
+.claude/skills/osint/references/platforms.md
+.claude/skills/osint/references/psychoprofile.md
+.claude/skills/osint/references/tools.md
+.claude/skills/osint/scripts/apify.sh
+.claude/skills/osint/scripts/brightdata.sh
+.claude/skills/osint/scripts/diagnose.sh
+.claude/skills/osint/scripts/exa.sh
+.claude/skills/osint/scripts/first-volley.sh
+.claude/skills/osint/scripts/jina.sh
+.claude/skills/osint/scripts/mcp-client.py
+.claude/skills/osint/scripts/merge-volley.sh
+.claude/skills/osint/scripts/package.json
+.claude/skills/osint/scripts/parallel.sh
+.claude/skills/osint/scripts/perplexity.sh
+.claude/skills/osint/scripts/run-actor.sh
+.claude/skills/osint/scripts/run_actor.js
+.claude/skills/osint/scripts/tavily.sh
+
+$ head -12 .claude/skills/osint/SKILL.md   # frontmatter, який читає агент
+---
+name: osint
+description: >
+  Conduct deep OSINT research on individuals. Build full digital footprint, psychoprofile
+  (MBTI/Big Five), career history, social graph with confidence scores. Recursive
+  self-evaluation until completeness threshold is met. Includes internal intelligence
+  (Telegram history, email, vault contacts) before going external.
+  Use when: "osint", "досье", "research person", "find everything about", "пробей",
+  "разведка", "due diligence", "background check", "digital footprint",
+  "найди всё про", "собери информацию", "кто это", "профиль человека".
+  NOT for: company/product research without a named person, competitive analysis,
+  market research, content generation, or general web scraping tasks.

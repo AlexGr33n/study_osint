@@ -1,0 +1,255 @@
+{
+ "models": {
+  "umm-maybe/AI-image-detector": "c7e223baf11bc40528af364ba7bdea030ef42f9e",
+  "Ateeqq/ai-vs-human-image-detector": "60e82406916921b823616bee33397baab38af3f0",
+  "haywoodsloan/ai-image-detector-deploy": "4ae1822603cb1ec980c217cfde1ef1b8e0477a16"
+ },
+ "results": {
+  "1_brics_fake.jpg": {
+   "umm-maybe/AI-image-detector": {
+    "ai_score": 0.4959,
+    "raw": [
+     {
+      "label": "human",
+      "score": 0.5041240453720093
+     },
+     {
+      "label": "artificial",
+      "score": 0.4958759844303131
+     }
+    ]
+   },
+   "Ateeqq/ai-vs-human-image-detector": {
+    "ai_score": 0.9996,
+    "raw": [
+     {
+      "label": "ai",
+      "score": 0.9995835423469543
+     },
+     {
+      "label": "hum",
+      "score": 0.000416423223214224
+     }
+    ]
+   },
+   "haywoodsloan/ai-image-detector-deploy": {
+    "ai_score": 0.0012,
+    "raw": [
+     {
+      "label": "real",
+      "score": 0.9988194108009338
+     },
+     {
+      "label": "artificial",
+      "score": 0.001180604798719287
+     }
+    ]
+   }
+  },
+  "1_brics_real_control.jpg": {
+   "umm-maybe/AI-image-detector": {
+    "ai_score": 0.8765,
+    "raw": [
+     {
+      "label": "artificial",
+      "score": 0.8764936923980713
+     },
+     {
+      "label": "human",
+      "score": 0.12350631505250931
+     }
+    ]
+   },
+   "Ateeqq/ai-vs-human-image-detector": {
+    "ai_score": 1.0,
+    "raw": [
+     {
+      "label": "ai",
+      "score": 0.9999939203262329
+     },
+     {
+      "label": "hum",
+      "score": 6.132630915089976e-06
+     }
+    ]
+   },
+   "haywoodsloan/ai-image-detector-deploy": {
+    "ai_score": 0.0017,
+    "raw": [
+     {
+      "label": "real",
+      "score": 0.9982833862304688
+     },
+     {
+      "label": "artificial",
+      "score": 0.0017166719771921635
+     }
+    ]
+   }
+  },
+  "2_hebdo_fake.jpg": {
+   "umm-maybe/AI-image-detector": {
+    "ai_score": 0.4502,
+    "raw": [
+     {
+      "label": "human",
+      "score": 0.5498096346855164
+     },
+     {
+      "label": "artificial",
+      "score": 0.45019036531448364
+     }
+    ]
+   },
+   "Ateeqq/ai-vs-human-image-detector": {
+    "ai_score": 0.9999,
+    "raw": [
+     {
+      "label": "ai",
+      "score": 0.9999090433120728
+     },
+     {
+      "label": "hum",
+      "score": 9.100524039240554e-05
+     }
+    ]
+   },
+   "haywoodsloan/ai-image-detector-deploy": {
+    "ai_score": 0.9736,
+    "raw": [
+     {
+      "label": "artificial",
+      "score": 0.9736409187316895
+     },
+     {
+      "label": "real",
+      "score": 0.02635904774069786
+     }
+    ]
+   }
+  },
+  "2_hebdo_real_control.png": {
+   "umm-maybe/AI-image-detector": {
+    "ai_score": 0.7251,
+    "raw": [
+     {
+      "label": "artificial",
+      "score": 0.7250784039497375
+     },
+     {
+      "label": "human",
+      "score": 0.27492162585258484
+     }
+    ]
+   },
+   "Ateeqq/ai-vs-human-image-detector": {
+    "ai_score": 0.9998,
+    "raw": [
+     {
+      "label": "ai",
+      "score": 0.9998444318771362
+     },
+     {
+      "label": "hum",
+      "score": 0.00015559763414785266
+     }
+    ]
+   },
+   "haywoodsloan/ai-image-detector-deploy": {
+    "ai_score": 0.037,
+    "raw": [
+     {
+      "label": "real",
+      "score": 0.9629590511322021
+     },
+     {
+      "label": "artificial",
+      "score": 0.03704092279076576
+     }
+    ]
+   }
+  },
+  "3_starmer_fake_crop.png": {
+   "umm-maybe/AI-image-detector": {
+    "ai_score": 0.4037,
+    "raw": [
+     {
+      "label": "human",
+      "score": 0.5962719917297363
+     },
+     {
+      "label": "artificial",
+      "score": 0.40372806787490845
+     }
+    ]
+   },
+   "Ateeqq/ai-vs-human-image-detector": {
+    "ai_score": 0.9993,
+    "raw": [
+     {
+      "label": "ai",
+      "score": 0.9993268251419067
+     },
+     {
+      "label": "hum",
+      "score": 0.0006731647881679237
+     }
+    ]
+   },
+   "haywoodsloan/ai-image-detector-deploy": {
+    "ai_score": 0.0034,
+    "raw": [
+     {
+      "label": "real",
+      "score": 0.9965763688087463
+     },
+     {
+      "label": "artificial",
+      "score": 0.0034236654173582792
+     }
+    ]
+   }
+  },
+  "3_starmer_real_control_crop.png": {
+   "umm-maybe/AI-image-detector": {
+    "ai_score": 0.5858,
+    "raw": [
+     {
+      "label": "artificial",
+      "score": 0.5858345031738281
+     },
+     {
+      "label": "human",
+      "score": 0.4141654968261719
+     }
+    ]
+   },
+   "Ateeqq/ai-vs-human-image-detector": {
+    "ai_score": 0.9996,
+    "raw": [
+     {
+      "label": "ai",
+      "score": 0.9995966553688049
+     },
+     {
+      "label": "hum",
+      "score": 0.0004033546429127455
+     }
+    ]
+   },
+   "haywoodsloan/ai-image-detector-deploy": {
+    "ai_score": 0.1731,
+    "raw": [
+     {
+      "label": "real",
+      "score": 0.8269309997558594
+     },
+     {
+      "label": "artificial",
+      "score": 0.17306901514530182
+     }
+    ]
+   }
+  }
+ }
+}

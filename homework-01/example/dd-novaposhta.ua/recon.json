@@ -1,0 +1,288 @@
+{
+  "domain": "novaposhta.ua",
+  "generated_utc": "2026-10-07T18:04:50Z",
+  "tool": "domain_recon.py 1.0",
+  "registration": {
+    "method": "rdap",
+    "created": "2010-10-29",
+    "updated": "2025-10-27",
+    "expires": "2026-10-29",
+    "status": [
+      "active"
+    ],
+    "nameservers": [
+      "nsa1.srv53.org",
+      "nsa2.srv53.com",
+      "nsa3.srv53.net",
+      "nsb1.srv53.com",
+      "nsb1.srv53.org",
+      "nsb4.srv53.net",
+      "nsc2.srv53.org",
+      "nsc3.srv53.net",
+      "nsc4.srv53.com",
+      "nsd3.srv53.net",
+      "nsd4.srv53.com",
+      "nsd4.srv53.org"
+    ],
+    "registrar": "Internet Invest LLC",
+    "registrant_org": "ТОВ 'НОВА ПОШТА'"
+  },
+  "dns": {
+    "A": [
+      "34.128.190.243"
+    ],
+    "AAAA": [],
+    "NS": [
+      "nsa1.srv53.org",
+      "nsa2.srv53.com",
+      "nsa3.srv53.net",
+      "nsb1.srv53.com",
+      "nsb1.srv53.org",
+      "nsb4.srv53.net",
+      "nsc2.srv53.org",
+      "nsc3.srv53.net",
+      "nsc4.srv53.com",
+      "nsd3.srv53.net",
+      "nsd4.srv53.com",
+      "nsd4.srv53.org"
+    ],
+    "MX": [
+      "1 smtp.google.com.",
+      "3 aspmx.l.google.com."
+    ],
+    "TXT": [
+      "MS=ms10693481",
+      "MS=ms18796849",
+      "MS=ms67179196",
+      "MS=ms97004098",
+      "ZOOM_verify_h00G1JDisAyxB0uNi2agwL",
+      "anthropic-domain-verification-aepqea=Tof5mVvwYC6H8ESqwfNrj5zPs",
+      "apple-domain-verification=enwi2pZm2i1h5xSU",
+      "atlassian-domain-verification=onoKTVY98KFH7LlbvatEh9q7cKdeVGmRs54FRavWNzp20k5y8x2xXUctxN3VX4nr",
+      "bluedot-domain-verification-j5edmz=i9tLgFbAAezvf2mBDdU776xaC",
+      "cisco-ci-domain-verification=30ef484f497270190ebef9388865dab78273585bd20a7f5903e83694b4d431ca",
+      "dtm-domain-verification=C9tKUUFbZlmh0FfyEX2wIvWmtDLMX7UiSN2YqlnDFnw",
+      "duo_sso_verification=YdtgUOQhCdZRAatKvOvtCddQYgMIaaGQ9MZZgrHQNRVmkJJa9SBgP0gl5O978Ztc",
+      "esputnik-verification=RVNQX0RWS19WMQABl4kAAAGScCXQWsO22_F5a9WU",
+      "globalsign-domain-verification=74D1EFEAC1E1F8339CBB9B5C6663516B",
+      "google-site-verification=3B1PR0K23BtYKHqF9BsatZzRZYPuKlj5lXoC_z-Hvzc",
+      "google-site-verification=lcwf5FRHt-9TXmdggqXkMPIG6eO6u2PeqG2b0FA3uDI",
+      "google-site-verification=qftPHUu7itynf34zuof3y0uqznZ1Yt0JbIyLDmDM-hs",
+      "google-site-verification=r2_jief3nc59_Kae1ddCGIo5qxyDqZ0bwV_77B64ges",
+      "imPplmn5QmYw6PR1HGH0p9FAGV/eanWQtbmMjj3Wl359GKF4tEmNKGQqwxJMlAgDNWyun8dCuTav4DDzhJeR7A==",
+      "teamviewer-sso-verification=5582ecc25d8f4b86b25d1e029ca2b563",
+      "v=spf1 +mx ip4:91.240.48.0/22 include:_spf.google.com include:spf2.esputnik.com ~all"
+    ],
+    "SPF": "v=spf1 +mx ip4:91.240.48.0/22 include:_spf.google.com include:spf2.esputnik.com ~all",
+    "DMARC": "v=DMARC1; p=none; rua=mailto:postmaster@novaposhta.ua",
+    "DMARC_policy": "none",
+    "TXT_verifications": [
+      "MS",
+      "apple-domain-verification",
+      "atlassian-domain-verification",
+      "cisco-ci-domain-verification",
+      "dtm-domain-verification",
+      "esputnik-verification",
+      "globalsign-domain-verification",
+      "google-site-verification",
+      "teamviewer-sso-verification"
+    ]
+  },
+  "ct": {
+    "source": "certspotter",
+    "certificates": 122,
+    "first_seen": "2025-10-24",
+    "last_seen": "2026-10-05",
+    "hostnames_count": 29,
+    "hostnames": [
+      "api-cdn.novaposhta.ua",
+      "api.novaposhta.ua",
+      "api2.novaposhta.ua",
+      "app.novaposhta.ua",
+      "application-stage.novaposhta.ua",
+      "application.novaposhta.ua",
+      "auth-cdn.novaposhta.ua",
+      "cdn.novaposhta.ua",
+      "courier.novaposhta.ua",
+      "developers.novaposhta.ua",
+      "humanitarian.novaposhta.ua",
+      "knowledge-base.novaposhta.ua",
+      "my.novaposhta.ua",
+      "new.novaposhta.ua",
+      "novadoc.novaposhta.ua",
+      "novaposhta.ua",
+      "nps.novaposhta.ua",
+      "online.novaposhta.ua",
+      "osm.novaposhta.ua",
+      "sd.novaposhta.ua",
+      "secgw.novaposhta.ua",
+      "shop.novaposhta.ua",
+      "starlink-registry.novaposhta.ua",
+      "static.novaposhta.ua",
+      "tracking.novaposhta.ua",
+      "wms-stage.novaposhta.ua",
+      "wms.novaposhta.ua",
+      "www.humanitarian.novaposhta.ua",
+      "www.novaposhta.ua"
+    ],
+    "top_issuers": [
+      [
+        "Google Trust Services",
+        120
+      ],
+      [
+        "DigiCert",
+        2
+      ]
+    ],
+    "partial": false,
+    "history_complete": false
+  },
+  "wayback": {
+    "first_snapshot": {
+      "date": "2010-10-29",
+      "url": "https://web.archive.org/web/20101029181827/http://www.novaposhta.ua:80/"
+    },
+    "last_snapshot": {
+      "date": "2026-10-04",
+      "url": "https://web.archive.org/web/20261004190735/https://novaposhta.ua/"
+    }
+  },
+  "gleif": [
+    {
+      "lei": "254900WPK1120W91L874",
+      "legal_name": "ТОВАРИСТВО З ОБМЕЖЕНОЮ ВІДПОВІДАЛЬНІСТЮ \"НОВА ПОШТА ГЛОБАЛ\"",
+      "other_names": [],
+      "jurisdiction": "UA",
+      "registered_as": "38130410",
+      "entity_status": "ACTIVE",
+      "lei_status": "LAPSED",
+      "legal_address": "Stolichne shose, Building 103, Kyiv, UA",
+      "url": "https://search.gleif.org/#/record/254900WPK1120W91L874"
+    }
+  ],
+  "signals": [
+    {
+      "severity": "low",
+      "code": "expiring",
+      "text": "Домен спливає 2026-10-29 — перевір, чи продовжується"
+    },
+    {
+      "severity": "low",
+      "code": "weak-dmarc",
+      "text": "DMARC p=none — ризик спуфінгу від імені домену"
+    }
+  ],
+  "errors": [
+    {
+      "source": "https://crt.sh/?q=%25.novaposhta.ua&output=json",
+      "error": "TimeoutError: The read operation timed out"
+    }
+  ],
+  "provenance": [
+    {
+      "file": "raw/rdap.json",
+      "source": "https://rdap.org/domain/novaposhta.ua",
+      "retrieved_utc": "2026-10-07T18:04:50Z",
+      "status": 200,
+      "bytes": 3023,
+      "sha256": "029261f57d193282a3454b19f9c714b090d1dc37846a77b4891b1d29c8e11429"
+    },
+    {
+      "file": "raw/dns-novaposhta.ua-A.json",
+      "source": "https://dns.google/resolve?name=novaposhta.ua&type=A",
+      "retrieved_utc": "2026-10-07T18:04:50Z",
+      "status": 200,
+      "bytes": 193,
+      "sha256": "069ed934d3c7f9c4ac35b0070e61de6f4f17856befb4a8041b3acdda57f7afca"
+    },
+    {
+      "file": "raw/dns-novaposhta.ua-AAAA.json",
+      "source": "https://dns.google/resolve?name=novaposhta.ua&type=AAAA",
+      "retrieved_utc": "2026-10-07T18:04:50Z",
+      "status": 200,
+      "bytes": 254,
+      "sha256": "8a3c01254f2f67311dcec09bcce1c5e7d92d14c4f29e0cf59a4a5311160a91f8"
+    },
+    {
+      "file": "raw/dns-novaposhta.ua-NS.json",
+      "source": "https://dns.google/resolve?name=novaposhta.ua&type=NS",
+      "retrieved_utc": "2026-10-07T18:04:50Z",
+      "status": 200,
+      "bytes": 1004,
+      "sha256": "a2918d34ae36a5ace4e85fc04d781ab73129dc5577da76de81eb36d6a338cf7d"
+    },
+    {
+      "file": "raw/dns-novaposhta.ua-MX.json",
+      "source": "https://dns.google/resolve?name=novaposhta.ua&type=MX",
+      "retrieved_utc": "2026-10-07T18:04:51Z",
+      "status": 200,
+      "bytes": 335,
+      "sha256": "611bfed288859d7e33054ab7cb9cc554eecf43620703cdc396b9aabbbd7a0ab6"
+    },
+    {
+      "file": "raw/dns-novaposhta.ua-TXT.json",
+      "source": "https://dns.google/resolve?name=novaposhta.ua&type=TXT",
+      "retrieved_utc": "2026-10-07T18:04:51Z",
+      "status": 200,
+      "bytes": 2559,
+      "sha256": "e1c97d5da1d99783bb382337b87c1b00f968b3b64e804f5b5c3908d1038aebb2"
+    },
+    {
+      "file": "raw/dns-_dmarc.novaposhta.ua-TXT.json",
+      "source": "https://dns.google/resolve?name=_dmarc.novaposhta.ua&type=TXT",
+      "retrieved_utc": "2026-10-07T18:04:51Z",
+      "status": 200,
+      "bytes": 288,
+      "sha256": "17c2efa2fe74f3eff424580637100caed8c4f8b1da6d005e589b164c67060b1a"
+    },
+    {
+      "file": "raw/ct-certspotter-0.json",
+      "source": "https://api.certspotter.com/v1/issuances?domain=novaposhta.ua&include_subdomains=true&expand=dns_names&expand=issuer",
+      "retrieved_utc": "2026-10-07T18:05:53Z",
+      "status": 200,
+      "bytes": 63750,
+      "sha256": "664665f44de099c07b486cfac4f89422c33aab90f95e9315d146d17f57524649"
+    },
+    {
+      "file": "raw/ct-certspotter-1.json",
+      "source": "https://api.certspotter.com/v1/issuances?domain=novaposhta.ua&include_subdomains=true&expand=dns_names&expand=issuer&after=17244922431",
+      "retrieved_utc": "2026-10-07T18:05:54Z",
+      "status": 200,
+      "bytes": 14031,
+      "sha256": "a17ac7dcad61af385871ef02b5790ccd95a878d6c8b2624af8a91d6ba91ba0bd"
+    },
+    {
+      "file": "raw/ct-certspotter-2.json",
+      "source": "https://api.certspotter.com/v1/issuances?domain=novaposhta.ua&include_subdomains=true&expand=dns_names&expand=issuer&after=17591712564",
+      "retrieved_utc": "2026-10-07T18:05:56Z",
+      "status": 200,
+      "bytes": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "file": "raw/wayback-first.json",
+      "source": "https://web.archive.org/cdx/search/cdx?url=novaposhta.ua&output=json&fl=timestamp,original,statuscode&filter=!statuscode:5..&limit=1",
+      "retrieved_utc": "2026-10-07T18:06:22Z",
+      "status": 200,
+      "bytes": 97,
+      "sha256": "1427cb8e91ea1770ebe49ef14d9ee0a8d5feab84a13ff51473c3bab31c84369e"
+    },
+    {
+      "file": "raw/wayback-last.json",
+      "source": "https://web.archive.org/cdx/search/cdx?url=novaposhta.ua&output=json&fl=timestamp,original,statuscode&filter=!statuscode:5..&from=2025&limit=-1",
+      "retrieved_utc": "2026-10-07T18:06:42Z",
+      "status": 200,
+      "bytes": 91,
+      "sha256": "d98035f93af2cf4bdc1407da51ae9c5a93d93b1a8d3934af33309cdaa842f737"
+    },
+    {
+      "file": "raw/gleif.json",
+      "source": "https://api.gleif.org/api/v1/lei-records?filter%5Bfulltext%5D=Nova%20Poshta&page%5Bsize%5D=5",
+      "retrieved_utc": "2026-10-07T18:06:42Z",
+      "status": 200,
+      "bytes": 3865,
+      "sha256": "3b30ca1be6fb05fb353224c3b89d818f1d838e5e2c66dcb19355125e423aad12"
+    }
+  ]
+}

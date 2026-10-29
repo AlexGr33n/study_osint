@@ -1,0 +1,37 @@
+# Трасування демо-прогону skill company-domain-check
+# Агент: Claude Code 2.1.210 (desktop, вкладка Code), модель Opus 5.5
+# Ціль: novaposhta.ua (позитивний контроль), режим standard (скорочений)
+# Час: 2026-10-07, UTC (за mtime файлів, мітками в логах і raw/; кроки 2–6 приблизно (≈), memo записано о 18:08:17)
+
+<17:54 Сесію відкрито в D:\!Projects\study_osint (тоді теки .claude\skills ще не було)
+17:54  .claude\skills\osint\                 ← встановлено smixs/osint-skill (лог 02)
+18:03  .claude\skills\company-domain-check\  ← створено власний skill (скрипт 18:00, SKILL.md 18:02, шаблон 18:03)
+18:04  claude -p (новий процес) → у system/init з'явились skills: company-domain-check, osint (лог 04)
+
+18:04  Skill(company-domain-check, "novaposhta.ua Україна standard")
+       → "Unknown skill: company-domain-check"
+       Причина: реєстр skills цієї сесії зібрано під час її старту, коли .claude\skills ще не існувало.
+       Нова сесія skill бачить (лог 04). Тому в цій сесії агент працює так само, як агенти без
+       нативної підтримки (Codex, OpenCode): читає SKILL.md і виконує кроки за ним.
+
+18:04  Крок 0  Gate: об'єкт = організація; мета = демо/позитивний контроль; тільки пасивні джерела
+18:04  Крок 1  Bash: python .claude/skills/company-domain-check/scripts/domain_recon.py novaposhta.ua
+               --company "Nova Poshta" --out homework/example/dd-novaposhta.ua        (лог 06)
+               rdap ✓  dns ✓  ct: crt.sh timeout → certspotter ✓  wayback ✓  gleif ✓
+               13 сирих відповідей + raw/SHA256SUMS
+≈18:05 Крок 2  WebSearch  "ТОВ "Нова Пошта" ЄДРПОУ 31316718"
+               WebFetch   novaposhta.ua                          → посилання на публічний договір
+               WebFetch   novaposhta.ua/more/public-agreement-for-cbs → назва, код 31316718, адреса, ПДВ
+               WebFetch   opendatabot.ua/c/31316718              → HTTP 403 (не обходили → «Прогалини»)
+               WebFetch   clarity-project.info/edr/31316718      → статус, дата, КВЕД, засновники, КБВ
+               WebFetch   youcontrol.com.ua/.../31316718         → те саме, керівник з 01.01.2026
+≈18:06 Крок 3  WebFetch   opensanctions.org: "Nova Poshta", "Нова Пошта", "31316718",
+                          "NP Holdings Limited", "Popereshniuk", "Klymov Viacheslav"
+               → 0 збігів; для "NP Holdings Limited" 2 fuzzy-збіги "Quicko" (PL) = хибні
+≈18:07 Крок 4  WebSearch  кримінальні провадження / суди → обшуки ГПУ 2018 (epravda), WebFetch для підтвердження
+               WebSearch  фішинг / scam від імені бренду  → масові фішингові кампанії, novaposhtaexpress.com
+≈18:08 Крок 5  Таблиця фактів, грейди A/B; суперечності: поштовий індекс, YouControl vs OpenSanctions
+≈18:08 Крок 6  red-flags.md → 3 прапори рівня low, medium+ немає → 🟩 Низький
+18:08  Крок 7  assets/memo-template.md → homework/example/dd-novaposhta.ua/memo.md
+
+Результат: homework/example/dd-novaposhta.ua/{memo.md, recon.md, recon.json, raw/}

@@ -1,0 +1,104 @@
+{
+ "1_brics_fake.jpg": {
+  "sha256": "8b3bb10bc6d47df05177504b0bb220840c60cefb375e0ca19eb9a7fa4d3c9b2d",
+  "format": "JPEG",
+  "size": [
+   1088,
+   1446
+  ],
+  "markers": {
+   "c2pa": false,
+   "jumbf": false,
+   "xmp": false,
+   "DigitalSourceType": false,
+   "trainedAlgorithmicMedia": false,
+   "exif": false
+  },
+  "jpeg_quality_est": 83,
+  "progressive": true
+ },
+ "1_brics_real_control.jpg": {
+  "sha256": "64ae348eb6d2f1b636c798558e70ef7f855dcbd0419e4e0290368834de1ca00d",
+  "format": "JPEG",
+  "size": [
+   1536,
+   864
+  ],
+  "markers": {
+   "c2pa": false,
+   "jumbf": false,
+   "xmp": false,
+   "DigitalSourceType": false,
+   "trainedAlgorithmicMedia": false,
+   "exif": false
+  },
+  "jpeg_quality_est": 71,
+  "progressive": true
+ },
+ "2_hebdo_fake.jpg": {
+  "sha256": "90f41105ddcc71f62e5ef0040b664a22a903f17246721c37e35c2c6a2c686e5f",
+  "format": "JPEG",
+  "size": [
+   1080,
+   1405
+  ],
+  "markers": {
+   "c2pa": false,
+   "jumbf": false,
+   "xmp": false,
+   "DigitalSourceType": false,
+   "trainedAlgorithmicMedia": false,
+   "exif": false
+  },
+  "jpeg_quality_est": 85,
+  "progressive": true
+ },
+ "2_hebdo_real_control.png": {
+  "sha256": "197351dc4305ddf0ff2da4e75504e52a5aedb33b5644126e3f3d508bf866388e",
+  "format": "PNG",
+  "size": [
+   700,
+   624
+  ],
+  "markers": {
+   "c2pa": false,
+   "jumbf": false,
+   "xmp": false,
+   "DigitalSourceType": false,
+   "trainedAlgorithmicMedia": false,
+   "exif": false
+  }
+ },
+ "3_starmer_fake_crop.png": {
+  "sha256": "116f453cf5a6c64817c9c3fb1e85dfba1d053f31491019b745bd10d440096fc7",
+  "format": "PNG",
+  "size": [
+   778,
+   497
+  ],
+  "markers": {
+   "c2pa": false,
+   "jumbf": false,
+   "xmp": false,
+   "DigitalSourceType": false,
+   "trainedAlgorithmicMedia": false,
+   "exif": false
+  }
+ },
+ "3_starmer_real_control_crop.png": {
+  "sha256": "0533817e9e44241ad8869bcbde306c0e8f3bf487518baecd5b8d5436bb9ac863",
+  "format": "PNG",
+  "size": [
+   778,
+   588
+  ],
+  "markers": {
+   "c2pa": false,
+   "jumbf": false,
+   "xmp": false,
+   "DigitalSourceType": false,
+   "trainedAlgorithmicMedia": false,
+   "exif": false
+  }
+ }
+}

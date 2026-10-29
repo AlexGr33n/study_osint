@@ -1,0 +1,26 @@
+# Цілі збору: публічні хештег-стрічки інстансів Mastodon (конфіг окремо від стану — стан у SQLite).
+# Ключ цілі = "<instance>#<tag>"; за ним зберігається курсор.
+
+[[target]]
+instance = "mastodon.social"
+tag = "ukraine"
+
+[[target]]
+instance = "mastodon.social"
+tag = "україна"
+
+[[target]]
+instance = "mastodon.social"
+tag = "osint"
+
+[[target]]
+instance = "mastodon.online"
+tag = "ukraine"
+
+[[target]]
+instance = "mastodon.invalid"
+tag = "ukraine"
+
+[[target]]
+instance = "mastodon.social"
+tag = "bad tag/../x"

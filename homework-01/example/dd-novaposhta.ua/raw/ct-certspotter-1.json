@@ -1,0 +1,376 @@
+[
+	{
+		"id": "17246955373",
+		"tbs_sha256": "682295b055d1f020e885dff78bef447c82c3492aacb0a2ea98612ef07448cefa",
+		"cert_sha256": "1341d6e24fb45747aace5f9592349479840688874aed1f96277a284f6340364c",
+		"dns_names": [
+			"novadoc.novaposhta.ua"
+		],
+		"pubkey_sha256": "b317ebab76fead23c2cf865c6f5e79e79f7874d6767bf2f74bbdf02e646ed3a1",
+		"issuer": {
+			"friendly_name": "Google Trust Services",
+			"pubkey_sha256": "c83bbda20db9e4d3791847fe0706bdad3aea150d04c9d674af514287d4dd016e",
+			"name": "C=US, O=Google Trust Services, CN=WR1"
+		},
+		"not_before": "2026-09-18T02:18:55Z",
+		"not_after": "2026-12-17T03:18:52Z",
+		"revoked": false
+	},
+	{
+		"id": "17246976702",
+		"tbs_sha256": "73e1cddd4fffa5d49359834adec531ca7a5f87143e880636ef5666c75f340bc6",
+		"cert_sha256": "87651b1140343066cf7436c35de9ed37d81ee71c751d458d2792554e72fb5e97",
+		"dns_names": [
+			"novadoc.novaposhta.ua"
+		],
+		"pubkey_sha256": "f1975437084d9094b80224f09bfb8b49b0b943f6bf19d4eb3817c8dffcda4d0a",
+		"issuer": {
+			"friendly_name": "Google Trust Services",
+			"pubkey_sha256": "908769e8d34477cc2cba0632c88605b22d7294c0840f78596d247c645b1afc0e",
+			"name": "C=US, O=Google Trust Services, CN=WE1"
+		},
+		"not_before": "2026-09-18T02:19:05Z",
+		"not_after": "2026-12-17T03:19:01Z",
+		"revoked": false
+	},
+	{
+		"id": "17407278718",
+		"tbs_sha256": "7eb7348afa6aec63f4cd99a170c5c553301554f603b4d354ad9f80bef6f6b311",
+		"cert_sha256": "12601ace596ea2aecef785c6001196bfdaab62047117ef5081590c04921b5234",
+		"dns_names": [
+			"wms.novaposhta.ua"
+		],
+		"pubkey_sha256": "9144602bab49e78277359085e305d91b08afbb595656764c472f8e34721d8e09",
+		"issuer": {
+			"friendly_name": "Google Trust Services",
+			"pubkey_sha256": "c83bbda20db9e4d3791847fe0706bdad3aea150d04c9d674af514287d4dd016e",
+			"name": "C=US, O=Google Trust Services, CN=WR1"
+		},
+		"not_before": "2026-09-25T12:49:50Z",
+		"not_after": "2026-12-24T13:48:42Z",
+		"revoked": false
+	},
+	{
+		"id": "17407282516",
+		"tbs_sha256": "47ace0643c3467d6d2be2516c24ccd04ab4405f1f3ca40e4cb85d9e4d073fb15",
+		"cert_sha256": "b786bd0469accd0a4b10f10cda343dc1eadb19f05f6542e8444be6bc71abbb38",
+		"dns_names": [
+			"wms.novaposhta.ua"
+		],
+		"pubkey_sha256": "0b5410848588e0717e6e4cee065d62d6f347890358def6f4795e6e39b509097f",
+		"issuer": {
+			"friendly_name": "Google Trust Services",
+			"pubkey_sha256": "908769e8d34477cc2cba0632c88605b22d7294c0840f78596d247c645b1afc0e",
+			"name": "C=US, O=Google Trust Services, CN=WE1"
+		},
+		"not_before": "2026-09-25T12:49:59Z",
+		"not_after": "2026-12-24T13:49:56Z",
+		"revoked": false
+	},
+	{
+		"id": "17428413842",
+		"tbs_sha256": "dfe087002d0e297999ad1cbdc7886c53e51c15ed5cd4ca708566643546d3549d",
+		"cert_sha256": "bed6c7602b74a735c18c6b11ad4b485db9edb59b87b200a728ba40169bc81ab1",
+		"dns_names": [
+			"wms-stage.novaposhta.ua"
+		],
+		"pubkey_sha256": "91239d5e3c7339f0c3f03a498cb4c2967aa776d6222e4f74391f6a1884da0030",
+		"issuer": {
+			"friendly_name": "Google Trust Services",
+			"pubkey_sha256": "c83bbda20db9e4d3791847fe0706bdad3aea150d04c9d674af514287d4dd016e",
+			"name": "C=US, O=Google Trust Services, CN=WR1"
+		},
+		"not_before": "2026-09-26T15:24:17Z",
+		"not_after": "2026-12-25T16:23:07Z",
+		"revoked": false
+	},
+	{
+		"id": "17428414831",
+		"tbs_sha256": "8fa8da86cd732ca567224591aea4670e4f6eff7fe32cd1d41d0465e631c65722",
+		"cert_sha256": "246a91da497b30820a810e1ad992215c523ca7d87176ed2e18c52c5fac205f41",
+		"dns_names": [
+			"wms-stage.novaposhta.ua"
+		],
+		"pubkey_sha256": "a0749dd00b98de3b090f20ef2a37a94a262a55c3ca9970f6784650856ccbfc4f",
+		"issuer": {
+			"friendly_name": "Google Trust Services",
+			"pubkey_sha256": "908769e8d34477cc2cba0632c88605b22d7294c0840f78596d247c645b1afc0e",
+			"name": "C=US, O=Google Trust Services, CN=WE1"
+		},
+		"not_before": "2026-09-26T15:24:26Z",
+		"not_after": "2026-12-25T16:24:23Z",
+		"revoked": false
+	},
+	{
+		"id": "17429488866",
+		"tbs_sha256": "c3102b1762a86dfc6c9e084a0cec50846d1513b56380aa6719e6ff4333487047",
+		"cert_sha256": "1f81ecda6110c6bb9539d292b49d61f767e7eba50cd9655eaa78903bda908ed9",
+		"dns_names": [
+			"wms-stage.novaposhta.ua"
+		],
+		"pubkey_sha256": "a210595eb82e7236736c1fbc8d534099150abdef093c9e2e2674cffb96457822",
+		"issuer": {
+			"friendly_name": "Google Trust Services",
+			"pubkey_sha256": "c83bbda20db9e4d3791847fe0706bdad3aea150d04c9d674af514287d4dd016e",
+			"name": "C=US, O=Google Trust Services, CN=WR1"
+		},
+		"not_before": "2026-09-26T16:42:22Z",
+		"not_after": "2026-12-25T17:42:19Z",
+		"revoked": false
+	},
+	{
+		"id": "17429490853",
+		"tbs_sha256": "2a5fd797151b5f69f9356ba1e74030defb9abc5f3fb70bc09e7e5b035981b036",
+		"cert_sha256": "b139365ed041ff541193e7e571eda7761cdc8826001f5f0cb580a22dd7e64d8d",
+		"dns_names": [
+			"wms-stage.novaposhta.ua"
+		],
+		"pubkey_sha256": "f34d15fe90781940fc2ebfe61700953e229ecf46b2d38f7c56d586ea80a4989d",
+		"issuer": {
+			"friendly_name": "Google Trust Services",
+			"pubkey_sha256": "908769e8d34477cc2cba0632c88605b22d7294c0840f78596d247c645b1afc0e",
+			"name": "C=US, O=Google Trust Services, CN=WE1"
+		},
+		"not_before": "2026-09-26T16:42:31Z",
+		"not_after": "2026-12-25T17:42:28Z",
+		"revoked": false
+	},
+	{
+		"id": "17469598782",
+		"tbs_sha256": "bc2558449c84b6ea92d18365d8e8d4c6b78423ecefe1eacc239846fa2d4a13b1",
+		"cert_sha256": "d38e86f4d9ca0231403123c7b05668aac3ab7a1179911a35d925f6176eabc7e7",
+		"dns_names": [
+			"api-cdn.novaposhta.ua"
+		],
+		"pubkey_sha256": "e62b24cd8b674188d25d31a4e44a6623d705644942e43597574fcd62e5a44438",
+		"issuer": {
+			"friendly_name": "Google Trust Services",
+			"pubkey_sha256": "c83bbda20db9e4d3791847fe0706bdad3aea150d04c9d674af514287d4dd016e",
+			"name": "C=US, O=Google Trust Services, CN=WR1"
+		},
+		"not_before": "2026-09-28T21:29:03Z",
+		"not_after": "2026-12-27T22:27:59Z",
+		"revoked": false
+	},
+	{
+		"id": "17469599471",
+		"tbs_sha256": "3c4e1d5ce60b1b4a5eb510b292c4bf551ff0184a3531b00ed56ab511f2555355",
+		"cert_sha256": "e5123acb65e7a0902fde0d0209b7b18cda29c81db75bfcfcd1113e4f468fbed1",
+		"dns_names": [
+			"api-cdn.novaposhta.ua"
+		],
+		"pubkey_sha256": "810726d1b8ec1c76cf1fb9719eb184e3a024abe0c4ce4ae31cf7c3261203c23b",
+		"issuer": {
+			"friendly_name": "Google Trust Services",
+			"pubkey_sha256": "908769e8d34477cc2cba0632c88605b22d7294c0840f78596d247c645b1afc0e",
+			"name": "C=US, O=Google Trust Services, CN=WE1"
+		},
+		"not_before": "2026-09-28T21:29:11Z",
+		"not_after": "2026-12-27T22:29:09Z",
+		"revoked": false
+	},
+	{
+		"id": "17535494919",
+		"tbs_sha256": "bf468fd1fd8f3a9735a417eb0f13f789ce3702c663ebb180ef9639782fe08d09",
+		"cert_sha256": "e44a14c4015997eb3abfaabf0263b8c2fa37a2300ea950fd8d43dfacc9b9768c",
+		"dns_names": [
+			"developers.novaposhta.ua"
+		],
+		"pubkey_sha256": "6ba83e826c350f5045f761448e6ba478fe98b25daca70e8233674e5f54cc88ec",
+		"issuer": {
+			"friendly_name": "Google Trust Services",
+			"pubkey_sha256": "908769e8d34477cc2cba0632c88605b22d7294c0840f78596d247c645b1afc0e",
+			"name": "C=US, O=Google Trust Services, CN=WE1"
+		},
+		"not_before": "2026-10-02T04:39:18Z",
+		"not_after": "2026-12-31T05:39:14Z",
+		"revoked": false
+	},
+	{
+		"id": "17535534697",
+		"tbs_sha256": "49cb2f79ed7455fecd16d423d9290946bed7fd97ca293aecec351daff472e3f8",
+		"cert_sha256": "d9fe6c3a5bc70391bca895a0c2344fc7600fb545fd056c90c2c18313dc2c8da8",
+		"dns_names": [
+			"developers.novaposhta.ua"
+		],
+		"pubkey_sha256": "7eb0c5756c6e6e6ce7eb77d0728ecf67e16d12fd9270b5f9ce9c333963e7ef67",
+		"issuer": {
+			"friendly_name": "Google Trust Services",
+			"pubkey_sha256": "c83bbda20db9e4d3791847fe0706bdad3aea150d04c9d674af514287d4dd016e",
+			"name": "C=US, O=Google Trust Services, CN=WR1"
+		},
+		"not_before": "2026-10-02T04:39:08Z",
+		"not_after": "2026-12-31T05:38:02Z",
+		"revoked": false
+	},
+	{
+		"id": "17535745612",
+		"tbs_sha256": "05f88692e5dff176a0d242faa7feba93caf0de9d157026bf7ac3746e9ea3c527",
+		"cert_sha256": "130aef29706acbe193cf5b4262bc773fd4f4e0d9537ad307dff7de8c1e24110e",
+		"dns_names": [
+			"developers.novaposhta.ua"
+		],
+		"pubkey_sha256": "76ed8567fdd0d6039f6a07023ffa10b6ac1bcc38c22bb427ca9b2bdcdc4d1813",
+		"issuer": {
+			"friendly_name": "Google Trust Services",
+			"pubkey_sha256": "c83bbda20db9e4d3791847fe0706bdad3aea150d04c9d674af514287d4dd016e",
+			"name": "C=US, O=Google Trust Services, CN=WR1"
+		},
+		"not_before": "2026-10-02T04:53:12Z",
+		"not_after": "2026-12-31T05:53:07Z",
+		"revoked": false
+	},
+	{
+		"id": "17535748133",
+		"tbs_sha256": "000433307e4d00cadff92ee53892afe3e4c7a282133180a63db1d28bb46f7915",
+		"cert_sha256": "fc742891f7077d59799a3641603a95012ccfeeb30c9ead8c6dc3925e1b687bab",
+		"dns_names": [
+			"developers.novaposhta.ua"
+		],
+		"pubkey_sha256": "efc7158ccbf14407da6e94165cec1af1b5eecf2d3674dd104ed5dc710f50e905",
+		"issuer": {
+			"friendly_name": "Google Trust Services",
+			"pubkey_sha256": "908769e8d34477cc2cba0632c88605b22d7294c0840f78596d247c645b1afc0e",
+			"name": "C=US, O=Google Trust Services, CN=WE1"
+		},
+		"not_before": "2026-10-02T04:53:22Z",
+		"not_after": "2026-12-31T05:53:19Z",
+		"revoked": false
+	},
+	{
+		"id": "17554978220",
+		"tbs_sha256": "9fb8d383c6168e3f7472546f0477de30af670577d3682300d39414ccaf06212c",
+		"cert_sha256": "52538a4ffa1e63d6e4d90cd63b7c7259714902b76522e553cf6168bdae871cec",
+		"dns_names": [
+			"app.novaposhta.ua"
+		],
+		"pubkey_sha256": "de2546a20d39ece4e4023a56d693e148387094cdb12d8e2c7110f85954fd1e73",
+		"issuer": {
+			"friendly_name": "Google Trust Services",
+			"pubkey_sha256": "908769e8d34477cc2cba0632c88605b22d7294c0840f78596d247c645b1afc0e",
+			"name": "C=US, O=Google Trust Services, CN=WE1"
+		},
+		"not_before": "2026-10-03T04:12:31Z",
+		"not_after": "2027-01-01T05:12:28Z",
+		"revoked": false
+	},
+	{
+		"id": "17554979248",
+		"tbs_sha256": "6619a87d083c0cf0d2e6bb42196745fb0235d95e9ce88d81fe2c18225231f04c",
+		"cert_sha256": "576ff2bf339f8095b498962e88f9e5bfe845cd5e8782d8389d05db1056352a6b",
+		"dns_names": [
+			"app.novaposhta.ua"
+		],
+		"pubkey_sha256": "5591023868e2d95269931d45fc3e6a0d26539d18a8e71d23437147e14f5cbea7",
+		"issuer": {
+			"friendly_name": "Google Trust Services",
+			"pubkey_sha256": "c83bbda20db9e4d3791847fe0706bdad3aea150d04c9d674af514287d4dd016e",
+			"name": "C=US, O=Google Trust Services, CN=WR1"
+		},
+		"not_before": "2026-10-03T04:12:22Z",
+		"not_after": "2027-01-01T05:11:17Z",
+		"revoked": false
+	},
+	{
+		"id": "17557273260",
+		"tbs_sha256": "3d3eb8a71fc1dfff5480f1b6838be55a40799a60a0308f8f8391d4061cafbde2",
+		"cert_sha256": "c1ab1a038e3e01a60049b508e5911a9bbf226143eb4aab1de3b8947bf124e99d",
+		"dns_names": [
+			"app.novaposhta.ua"
+		],
+		"pubkey_sha256": "1a17b6a46b7b986ec87864728d0c09b081a8803f69801cbf0f77555f8ad8fe16",
+		"issuer": {
+			"friendly_name": "Google Trust Services",
+			"pubkey_sha256": "908769e8d34477cc2cba0632c88605b22d7294c0840f78596d247c645b1afc0e",
+			"name": "C=US, O=Google Trust Services, CN=WE1"
+		},
+		"not_before": "2026-10-03T07:27:11Z",
+		"not_after": "2027-01-01T08:27:09Z",
+		"revoked": false
+	},
+	{
+		"id": "17557273650",
+		"tbs_sha256": "c04c694b5370de4abdeb34ff06b8c28cfefefdac3cef73b2cfb69486a96ce225",
+		"cert_sha256": "24e281870203de88932b285e33d1a378ddf7174cbee201d3a3c58631cba6cda1",
+		"dns_names": [
+			"app.novaposhta.ua"
+		],
+		"pubkey_sha256": "8567560da9a923aca0d97c0159b4a2cb59d614455b31ef21b9645d99d6de7884",
+		"issuer": {
+			"friendly_name": "Google Trust Services",
+			"pubkey_sha256": "c83bbda20db9e4d3791847fe0706bdad3aea150d04c9d674af514287d4dd016e",
+			"name": "C=US, O=Google Trust Services, CN=WR1"
+		},
+		"not_before": "2026-10-03T07:27:03Z",
+		"not_after": "2027-01-01T08:27:00Z",
+		"revoked": false
+	},
+	{
+		"id": "17590345440",
+		"tbs_sha256": "dc1ebf4581f3e05dbe53637d6c1eacb310b57b1f11924593b770340d246fa902",
+		"cert_sha256": "f60354474e15a86e97222422802d825466ed06ebfe1ddc65511c4223772b2926",
+		"dns_names": [
+			"starlink-registry.novaposhta.ua"
+		],
+		"pubkey_sha256": "2453b086dab9079e4ab3fd15d16f660061485864cf9e384c0c4678a99328d4f3",
+		"issuer": {
+			"friendly_name": "Google Trust Services",
+			"pubkey_sha256": "c83bbda20db9e4d3791847fe0706bdad3aea150d04c9d674af514287d4dd016e",
+			"name": "C=US, O=Google Trust Services, CN=WR1"
+		},
+		"not_before": "2026-10-05T01:13:36Z",
+		"not_after": "2027-01-03T02:12:31Z",
+		"revoked": false
+	},
+	{
+		"id": "17590354991",
+		"tbs_sha256": "854d3fe195c1d1f0cfd75d6af68b438b566caa222bb7167009720c1902dded51",
+		"cert_sha256": "91ced1d2f93b3ab7f4ad76e0030202e0bed3b7d9e37790a26c3d8d6abd480469",
+		"dns_names": [
+			"starlink-registry.novaposhta.ua"
+		],
+		"pubkey_sha256": "f1757c6e588840acb96bcccdc8d48945163f3e8cabb2a271849269a6c619d185",
+		"issuer": {
+			"friendly_name": "Google Trust Services",
+			"pubkey_sha256": "908769e8d34477cc2cba0632c88605b22d7294c0840f78596d247c645b1afc0e",
+			"name": "C=US, O=Google Trust Services, CN=WE1"
+		},
+		"not_before": "2026-10-05T01:13:45Z",
+		"not_after": "2027-01-03T02:13:42Z",
+		"revoked": false
+	},
+	{
+		"id": "17591706360",
+		"tbs_sha256": "16538973d242f0842416f36d60aae61bc2757148833da087bcd05c295fd2068b",
+		"cert_sha256": "985c2884fc816aa613a52796c486420e3b67bf3bc5b8f679484761e4600e5da1",
+		"dns_names": [
+			"starlink-registry.novaposhta.ua"
+		],
+		"pubkey_sha256": "66f91cbdfbdfdd76c2598a61e289255b4500cd40c38543c81b583fac6132aae1",
+		"issuer": {
+			"friendly_name": "Google Trust Services",
+			"pubkey_sha256": "c83bbda20db9e4d3791847fe0706bdad3aea150d04c9d674af514287d4dd016e",
+			"name": "C=US, O=Google Trust Services, CN=WR1"
+		},
+		"not_before": "2026-10-05T02:51:32Z",
+		"not_after": "2027-01-03T03:51:29Z",
+		"revoked": false
+	},
+	{
+		"id": "17591712564",
+		"tbs_sha256": "deefced4b5d6a2b73fb5aaa87783f78eca26c68d67f7396d9961ec507f9b9e83",
+		"cert_sha256": "25727ed91b89686ac82cad960ca21d7b34e8517d16d770b7fc8e7f78a923953c",
+		"dns_names": [
+			"starlink-registry.novaposhta.ua"
+		],
+		"pubkey_sha256": "41f76687e1ded007a67c808d9a8ef93b2b47e5d2755ee68467c924308415274c",
+		"issuer": {
+			"friendly_name": "Google Trust Services",
+			"pubkey_sha256": "908769e8d34477cc2cba0632c88605b22d7294c0840f78596d247c645b1afc0e",
+			"name": "C=US, O=Google Trust Services, CN=WE1"
+		},
+		"not_before": "2026-10-05T02:51:43Z",
+		"not_after": "2027-01-03T03:51:38Z",
+		"revoked": false
+	}
+]

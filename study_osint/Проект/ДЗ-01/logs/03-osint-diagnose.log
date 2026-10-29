@@ -1,0 +1,58 @@
+# Phase 0 скілу osint: bash .claude/skills/osint/scripts/diagnose.sh
+# UTC: 2026-10-07T17:54:22Z  |  shell: GNU bash, version 5.2.26(1)-release (x86_64-pc-msys)
+
+=== OSINT TOOLKIT DIAGNOSTIC ===
+
+📡 API Tokens:
+  ❌ APIFY_API_TOKEN
+  ❌ JINA_API_KEY
+  ❌ PERPLEXITY_API_KEY
+  ❌ PARALLEL_API_KEY
+  ⚠️  EXA_API_KEY (not set — exa.sh won't work)
+  ❌ TAVILY_API_KEY
+  ❌ BRIGHTDATA_MCP_URL
+
+🔧 CLI Tools:
+  ❌ mcporter
+  ❌ mcpc (npm i @apify/mcpc)
+  ❌ jq
+  ✅ curl
+  ✅ node v22.23.1 (run_actor.js compatible)
+  ✅ run_actor.js (embedded, 55+ actors)
+  ✅ run-actor.sh (bash wrapper)
+
+📱 Internal Intelligence:
+  ❌ tg.py (no Telegram access)
+  ❌ himalaya (no email access)
+  ❌ vault/crm (no CRM vault)
+  ❌ twitter.py (no Twitter access)
+
+🔌 MCP Servers:
+  ⚠️  mcporter not installed (npm i -g mcporter)
+
+📊 Capabilities:
+  LinkedIn scraping (Apify): ❌
+  Instagram scraping (Apify): ❌
+  TikTok scraping: ❌
+  YouTube scraping: ❌
+  Contact enrichment: ❌
+  Google Maps: ❌
+  Facebook scraping: ❌
+  CAPTCHA bypass: ❌
+  Deep search (Jina): ❌
+  Quick answers (Perplexity): ❌
+  Deep research (Perplexity): ❌
+  Agent search (Tavily): ❌
+  Semantic search (Exa): ❌
+  People/Company search (Exa): ❌
+  AI search (Parallel): ❌
+  Telegram intel: ❌
+  Email intel: ❌
+
+=== END DIAGNOSTIC ===
+exit code: 0
+
+# Graceful degradation: скрипт без ключа зупиняється з поясненням, а не падає мовчки
+$ bash .claude/skills/osint/scripts/perplexity.sh sonar "test"
+.claude/skills/osint/scripts/perplexity.sh: line 8: PERPLEXITY_API_KEY: Set PERPLEXITY_API_KEY
+exit code: 1

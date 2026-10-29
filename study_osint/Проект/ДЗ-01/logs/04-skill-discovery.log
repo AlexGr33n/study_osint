@@ -1,0 +1,23 @@
+# Доказ виявлення skills агентом (Claude Code, headless-режим)
+# Команда (запуск із кореня проєкту D:\!Projects\study_osint):
+$ claude -p "Які skills тобі доступні в цьому проєкті (з .claude/skills)? ..." --model haiku --output-format stream-json --verbose
+# Записано (UTC): 2026-10-07T18:04:13Z
+
+## Подія system/init (агент сканує skills ДО звернення до моделі)
+claude_code_version: 2.1.210
+cwd: D:\!Projects\study_osint
+model: claude-haiku-4-5-20251001
+permissionMode: default
+apiKeySource: none
+tools: Task, Bash, CronCreate, CronDelete, CronList, DesignSync, Edit, EnterWorktree, ExitWorktree, Glob, Grep, Monitor ... (усього 31)
+skills: усього 135 (глобальні + плагіни + проєктні)
+  ↳ проєктні з .claude/skills/: ['company-domain-check', 'osint']
+slash_commands, що містять проєктні skills: ['company-domain-check', 'osint']
+
+## Результат виклику моделі
+is_error: True  terminal_reason: api_error
+result: Failed to authenticate: OAuth session expired and could not be refreshed
+
+Примітка: окремий CLI-процес мав прострочену OAuth-сесію, тому модель не відповіла;
+виявлення skills відбувається локально на етапі init і від авторизації не залежить.
+Виконання skill моделлю див. у logs/05-demo-run-trace.log та homework/example/.

@@ -1,0 +1,6 @@
+upstream: https://github.com/elementalsouls/Claude-OSINT
+commit: 13d920413448c026b52ac74efee0f1eb39dd81ff
+commit-date: 2026-08-31
+vendored-utc: 2026-10-07T18:19:12Z
+license: MIT (code) + CC-BY-4.0 (content), (c) 2026 Sachin Sharma
+note: verbatim reference copy; NOT wired as an active .claude/skills skill

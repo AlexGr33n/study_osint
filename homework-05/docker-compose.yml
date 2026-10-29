@@ -1,0 +1,19 @@
+# Колектор за розкладом: інкрементний прогін кожні 30 хв, база й логи — у томах на хості.
+# Разові команди: docker compose run --rm cli backfill | stats | export | dashboard
+x-collector: &collector
+  build: .
+  env_file: .env
+  init: true  # коректна зупинка за docker stop (sh як PID 1 ігнорує SIGTERM)
+  volumes:
+    - ./data:/app/data
+    - ./logs:/app/logs
+    - ./targets.toml:/app/targets.toml:ro
+
+services:
+  collector:
+    <<: *collector
+    entrypoint: ["sh", "-c", "while true; do python -m collector run; python -m collector dashboard; sleep 1800; done"]
+    restart: unless-stopped
+  cli:
+    <<: *collector
+    profiles: ["cli"]  # не стартує з `up`, лише через `run`; ENTRYPOINT образу — python -m collector

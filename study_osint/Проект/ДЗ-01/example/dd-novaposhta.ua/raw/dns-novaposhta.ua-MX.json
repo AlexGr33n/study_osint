@@ -1,0 +1,1 @@
+{"Status":0,"TC":false,"RD":true,"RA":true,"AD":false,"CD":false,"Question":[{"name":"novaposhta.ua.","type":15}],"Answer":[{"name":"novaposhta.ua.","type":15,"TTL":300,"data":"1 smtp.google.com."},{"name":"novaposhta.ua.","type":15,"TTL":300,"data":"3 aspmx.l.google.com."}],"Comment":"Response from 2001:41d0:203:dee4:178:32:247:1."}
