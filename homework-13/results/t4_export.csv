@@ -1,0 +1,4 @@
+file, source, format, nodes, relationships, properties, time, rows, batchSize, batches, done, data
+"gephi_nodes.csv", "statement: cols(6)", "csv", 0, 0, 468, 8, 78, 20000, 1, TRUE, NULL
+file, source, format, nodes, relationships, properties, time, rows, batchSize, batches, done, data
+"gephi_edges.csv", "statement: cols(3)", "csv", 0, 0, 246, 0, 82, 20000, 1, TRUE, NULL

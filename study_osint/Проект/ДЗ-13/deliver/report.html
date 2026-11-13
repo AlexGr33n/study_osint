@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<title>ДЗ-13: Патерни, тренди та кластеризація — звіт</title>
+<style>
+  @page { size: A4; margin: 16mm 15mm; }
+  body { font-family: "Segoe UI", Arial, sans-serif; font-size: 10.5pt; line-height: 1.45; color: #1a1a1a; }
+  h1 { font-size: 17pt; margin: 0 0 4px; }
+  h2 { font-size: 13pt; margin: 18px 0 6px; border-bottom: 1px solid #ccc; padding-bottom: 2px; }
+  h3 { font-size: 11pt; margin: 12px 0 4px; }
+  .meta { color: #555; font-size: 9.5pt; margin-bottom: 10px; }
+  table { border-collapse: collapse; margin: 6px 0 8px; font-size: 9.5pt; }
+  th, td { border: 1px solid #bbb; padding: 3px 7px; text-align: right; }
+  th { background: #f0f0f0; }
+  td.l, th.l { text-align: left; }
+  code { font-family: Consolas, monospace; font-size: 9pt; background: #f4f4f4; padding: 0 2px; }
+  img { max-width: 100%; }
+  .fig { text-align: center; margin: 6px 0; }
+  .cap { font-size: 9.5pt; color: #333; margin-top: 2px; }
+  .box { border-left: 3px solid #d7261e; padding: 4px 10px; background: #fafafa; }
+  .pb { page-break-before: always; }
+  .ok { color: #1a7f37; font-weight: 600; }
+  ul { margin: 4px 0; padding-left: 20px; }
+  table, .fig, .box { break-inside: avoid; }
+  h2, h3 { break-after: avoid; }
+</style>
+</head>
+<body>
+
+<h1>ДЗ-13: Патерни, тренди та кластеризація</h1>
+<div class="meta">Прізвище Ім'я · Elliptic++ (Elmougy &amp; Liu, KDD 2023) · Neo4j Community 2026.10.1 + GDS 2026.10.1 + APOC 2026.10.1 ·
+Gephi Toolkit 0.11.4 · запуск 13.11.2026. Усі запити з порогами — у <code>queries.cypher</code>.</div>
+
+<h2>Підготовка</h2>
+<p><code>prep.py</code> → <code>01_import.cypher</code> (≈ 2,5 хв). Підрахунки <span class="ok">збігаються з еталоном</span> (знімок — <code>import.png</code>):</p>
+<table>
+  <tr><th class="l">Вузли й ребра</th><th>Transaction</th><th>Wallet</th><th>FLOWS_TO</th><th>INPUT</th><th>OUTPUT</th><th>SENT_TO</th></tr>
+  <tr><td class="l">У моїй базі</td><td>203 769</td><td>822 942</td><td>234 355</td><td>477 117</td><td>837 124</td><td>2 775 637</td></tr>
+</table>
+
+<h2>Завдання 1. Тренд</h2>
+<div class="fig"><img src="trend.png" style="width: 92%"></div>
+<table>
+  <tr><th class="l">Кроки</th><th>illicit</th><th>розмічених</th><th>частка illicit</th></tr>
+  <tr><td class="l">1–42</td><td>4 376</td><td>39 877</td><td><b>10,97 %</b></td></tr>
+  <tr><td class="l">43–49</td><td>169</td><td>6 687</td><td><b>2,53 %</b></td></tr>
+</table>
+<p>Частки пораховано через суми <code>illicit / labelled</code>, а не як середнє відсотків. До кроку 42 частка стрибає від 0,4 до 36 %, а з кроку 43 падає до 0,3–1,8 % на кроках 43–46 і лише на 48–49 повертається до 7,6–11,8 %. Альтернативне пояснення, крім «злочинців стало менше»: близько кроку 43 закрився великий darknet-ринок (так пояснюють провал моделей після 43 автори оригінального Elliptic, Weber et al., 2019). Злочинна активність переходить на нові адреси й сервіси, які ще ніхто не атрибутував. Тобто падає покриття розмітки, а не злочинність: мітки — це «що відомо слідству», а не «що відбувалося».</p>
+
+<h2 class="pb">Завдання 2. Патерни</h2>
+<h3>2.1 Fan-in</h3>
+<p>Перцентилі кількості відправників: <b>p99 = 46, p99.9 = 103, max = 11 213</b>. Поріг 103 (p99.9) — «хвіст» розподілу, а не число «на око». Його перевищують 833 гаманці:</p>
+<table>
+  <tr><th class="l">Клас</th><th>гаманців ≥ 103 відправників</th><th>частка</th><th>базова частка</th><th>lift</th></tr>
+  <tr><td class="l">illicit</td><td>22</td><td>2,6 %</td><td>1,7 %</td><td>1,5</td></tr>
+  <tr><td class="l">licit</td><td>453</td><td>54,4 %</td><td>30,5 %</td><td>1,8</td></tr>
+  <tr><td class="l">unknown</td><td>358</td><td>43,0 %</td><td>67,8 %</td><td>0,6</td></tr>
+</table>
+<p><b>Висновок:</b> fan-in сам по собі не є ознакою злочинної активності: серед «консолідаторів» licit-гаманців у 20 разів більше, ніж illicit, а lift у licit вищий. Це насамперед біржі, платіжні сервіси й пули, і без другого сигналу fan-in дає хибні спрацювання.</p>
+
+<h3>2.2 Peel chain</h3>
+<table>
+  <tr><th class="l">Поріг «відщепу» outMin / outMax</th><th>&lt; 0,1</th><th>&lt; 0,05</th><th>&lt; 0,01 (додатково)</th></tr>
+  <tr><td class="l">illicit-транзакцій, з яких починається ланцюжок із 5 переходів</td><td><b>366</b></td><td><b>357</b></td><td>189</td></tr>
+</table>
+<p><b>Висновок:</b> зміна порогу з 0,1 на 0,05 прибрала лише 9 стартів (−2,5 %). Отже, у знайдених ланцюжках «відщеп» майже завжди менший за 5 % від решти: дрібна виплата і велика решта на нову адресу, крок за кроком. Форма різка й стабільна до порогу. Лише при порозі 0,01 лишається 189 стартів: приблизно в половини ланцюжків усі п'ять відщепів менші за 1 %, а в решти хоча б один лежить між 1 і 5 %.</p>
+
+<h3>2.3 Експозиція</h3>
+<table>
+  <tr><th class="l">unknown-гаманець</th><th>exposure (illicit за 1–2 кроки)</th><th class="l">прямі відправники</th></tr>
+  <tr><td class="l"><code>18sJPXgoWoL3Z1pcM22QvWwyyFVhwxrXE9</code></td><td>1 061</td><td class="l">1: <code>1FvtWwP3…</code> (illicit, сам має 1 060 illicit-відправників)</td></tr>
+  <tr><td class="l"><code>1781T3nnX2ncqTHYbRcac1R58VR1mFvmqt</code></td><td>1 061</td><td class="l">той самий 1 відправник <code>1FvtWwP3…</code></td></tr>
+  <tr><td class="l"><code>3BBio7imFnNJ2cJEMoArJ1QcBzS4NmvAfr</code></td><td>319</td><td class="l">33, з них 1 illicit (<code>3MnQyozU…</code>, за ним 318 illicit)</td></tr>
+</table>
+<p><b>Висновок:</b> рекордна експозиція 1 061 складається з 1 прямого illicit-відправника плюс 1 060 його власних illicit-відправників. Вона «успадкована» через одне ребро з вагою n = 1, тому це <b>слабкий</b> сигнал: адреса могла отримати одну виплату від консолідатора, нічого не знаючи про його джерела. Те саме з третьою адресою. Висока експозиція значуща, лише коли її дають багато незалежних шляхів.</p>
+
+<h2 class="pb">Завдання 3. Спільноти</h2>
+<p>Весь <code>03_gds.cypher</code> (≈ 35 с): WCC — 2 компоненти (822 935 + 7); <b>Louvain — 385 спільнот, Q = 0,928</b>; Leiden — 435, Q = 0,926. У самоперевірці курсу вказано ≈ 410–450 спільнот, а в мене 385: Louvain недетермінований, модулярність збігається. Базова частка illicit серед гаманців — 1,73 %.</p>
+<table>
+  <tr><th>#</th><th>community</th><th>size</th><th>illicit</th><th>licit</th><th>illicitPct</th><th>lift</th></tr>
+  <tr><td>1</td><td><b>476429</b></td><td>78</td><td>33</td><td>0</td><td>42,3 %</td><td><b>24,4</b></td></tr>
+  <tr><td>2</td><td>744291</td><td>5 643</td><td>1 357</td><td>803</td><td>24,0 %</td><td>13,9</td></tr>
+  <tr><td>3</td><td>131194</td><td>3 161</td><td>715</td><td>1 078</td><td>22,6 %</td><td>13,0</td></tr>
+  <tr><td>4</td><td>370507</td><td>2 405</td><td>519</td><td>523</td><td>21,6 %</td><td>12,4</td></tr>
+  <tr><td>5</td><td>206855</td><td>84</td><td>18</td><td>23</td><td>21,4 %</td><td>12,4</td></tr>
+</table>
+<p>У цьому запуску перше місце посіла мала спільнота (78 гаманців, усі активні лише на кроці 15). У довідковому запуску максимум був 28,2 % / lift 16,3. Кандидати в ліди — unknown із найвищим PageRank у спільноті 476429:</p>
+<table>
+  <tr><th class="l">lead</th><th>pagerank</th><th>senders</th><th>receivers</th><th>крок</th></tr>
+  <tr><td class="l"><b><code>1PMBzVZqD7uqsDr8LQKXFyXb7eggRUUfP9</code></b></td><td>3,83</td><td>1</td><td>0</td><td>15</td></tr>
+  <tr><td class="l"><code>19L3MtGJ16GXBF8gJmsLYz76KTjPPm6Jnk</code></td><td>0,71</td><td>1</td><td>0</td><td>15</td></tr>
+  <tr><td class="l"><code>17t2NY43e8ziZa2Ra8NbNfimij3sYuLMiv</code></td><td>0,48</td><td>1</td><td>0</td><td>15</td></tr>
+</table>
+<p>Обираю <code>1PMBzVZq…</code>: його PageRank уп'ятеро вищий за наступного, і саме він отримав від хаба спільноти <code>1FHFZAyf…</code> увесь зібраний баланс (див. завдання 4 і 5). Окремо помітно, що серед лідів з найвищим PageRank у <code>03_gds.cypher</code> (запит 8) перше місце посідає <code>1781T3nn…</code> із завдання 2.3 (PR 144,7). Його PageRank так само успадкований від хаба <code>1FvtWwP3…</code>.</p>
+
+<h2 class="pb">Завдання 4. Gephi</h2>
+<div class="fig"><img src="community.png" style="width: 88%"></div>
+<p class="cap"><b>Кольори й розмір:</b> колір — Partition за <code>class</code> (червоний — illicit, сірий — unknown; licit у спільноті немає), розмір — Ranking за <code>pagerank</code>. Найбільший червоний вузол — хаб <code>1FHFZAyf…</code>, найбільший сірий — лід <code>1PMBzVZq…</code>. <b>Розташування illicit:</b> вони не розкидані по спільноті. Майже всі утворюють окреме скупчення-«зірку», що сходиться в хаб, а unknown-гаманці лежать окремо, ланцюжками переказів.</p>
+<p style="font-size:9pt;color:#555">Спільноту вивантажено блоком B з <code>04_export.cypher</code> (78 вузлів, 82 ребра). Gephi GUI не встановлено, тому ті самі кроки виконано в Gephi Toolkit 0.11.4 (<code>tools/GephiCommunity.java</code>): ForceAtlas2 з Approximate Repulsion (Barnes-Hut), далі Prevent Overlap (adjustSizes), Partition за class, Ranking за pagerank, Preview → PNG/SVG, Save project → <code>community.gephi</code>.</p>
+
+<h2 class="pb">Завдання 5. Висновок про лід</h2>
+<div class="box">
+<p><b>Лід:</b> <code>1PMBzVZqD7uqsDr8LQKXFyXb7eggRUUfP9</code> (unknown). Це найвищий PageRank серед unknown у спільноті Louvain 476429, першій у топ-5: 78 гаманців, 42,3 % illicit, lift 24,4, жодного licit.</p>
+<p><b>Сигнал А — сусідство за мітками.</b> У ліда один відправник — illicit-гаманець <code>1FHFZAyf…</code>. На кроці 15 у нього зайшли кошти від 29 гаманців, і всі 29 мають мітку illicit.</p>
+<p><b>Сигнал Б — форма транзакції, без міток.</b> Лід отримав увесь вихід транзакції 246979279: 29 вхідних потоків, 1 вихід 14,989 BTC, без решти. Це консолідація з повним «sweep» на нову адресу, після якого кошти в межах датасету не рухаються. Серед 171 гаманця, що отримували такий sweep (1 вихід, ≥ 20 вхідних потоків), illicit — 12,9 % (lift ≈ 7,5). Сигнал рахується з форми транзакції без жодних міток, тому не випливає з міток чи спільноти.</p>
+<p>Спільноту окремим сигналом не рахую: лід має одне ребро, тож членство в ній успадковане від хаба. Leiden кладе лід у спільноту з 5 087 гаманців, де illicit лише 6,8 % (lift ≈ 3,9).</p>
+<p><b>Альтернативи:</b> (1) депозитна адреса біржі чи обмінника, куди злочинець вивів кошти; тоді адреса належить сервісу; (2) холодне зберігання того самого оператора; (3) неповна розмітка: сама транзакція 246979279 має клас unknown, а мітки гаманців в Elliptic++, судячи з даних, виведено з міток транзакцій, тож лід «unknown» за побудовою; (4) хибна мітка хаба: якщо <code>1FHFZAyf…</code> — сервіс, сигнал А зникає.</p>
+<p><b>Упевненість: помірна.</b> Два незалежні сигнали узгоджені, але обидва стосуються одного кластера на одному кроці, а відрізнити «гаманець оператора» від «депозиту біржі» в межах датасету неможливо.</p>
+<p><b>Наступний крок:</b> у block explorer (mempool.space, Blockchair) подивитися, куди й коли пішли 14,989 BTC після кроку 15 і чи з'являється адреса у спільних входах з іншими. Далі — відкриті атрибуції: WalletExplorer/OXT (чи адреса в кластері відомого сервісу), Chainabuse, OFAC SDN (чи згадуються лід або <code>1FHFZAyf…</code>).</p>
+</div>
+
+<h2>Примітка про мітки</h2>
+<p>Жоден unknown-гаманець не бере участі в жодній із 4 545 illicit-транзакцій (запит 5.5). Отже, мітки гаманців в Elliptic++ виведено з міток транзакцій. Тому «unknown» означає «не торкався розміченої illicit-транзакції», а не «перевірений і чистий». Через це сигнал «отримав кошти з illicit-транзакції» для unknown неможливий, і для другого сигналу я взяв форму транзакції.</p>
+
+</body>
+</html>

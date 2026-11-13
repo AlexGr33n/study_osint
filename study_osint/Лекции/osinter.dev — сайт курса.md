@@ -4,7 +4,7 @@ tags: [osint, moc, course, osinter]
 status: growing
 source: "https://osinter.dev/ — исходники github.com/popovvasile/osint-ai-2026 @698c9bb (2026-11-12)"
 created: 2026-11-02
-updated: 2026-11-12
+updated: 2026-11-13
 ---
 
 # osinter.dev — сайт курса «AI для OSINT 2026»
@@ -90,7 +90,7 @@ PDF слайдов лекций 10, 11, 13, 14, 16, 17 лежат в `Лекци
 
 ### Промпты, шаблоны, статьи
 - [Бібліотека готових промптів](https://osinter.dev/04-Промпти/Готові-промпти).
-- Шаблоны: [Чеклист дослідження](https://osinter.dev/07-Шаблони/Чеклист-дослідження) · [Шаблон досьє](https://osinter.dev/07-Шаблони/Шаблон-досьє) (для воркшопа урока 11; досье на людей в хранилище не храним) · [Шаблон кейсу](https://osinter.dev/07-Шаблони/Шаблон-кейсу).
+- Шаблоны: [Чеклист дослідження](https://osinter.dev/07-Шаблони/Чеклист-дослідження) · [Шаблон досьє](https://osinter.dev/07-Шаблони/Шаблон-досьє) (для воркшопа урока 11; досье на частных лиц в хранилище не храним — исключение: сданное ДЗ-11 по публичному должностному лицу, [[Проект — индекс|Проект/ДЗ-11]]) · [Шаблон кейсу](https://osinter.dev/07-Шаблони/Шаблон-кейсу).
 - Статьи-туториалы (англ.): [Telegram network pipeline](https://osinter.dev/Articles/article-1-telegram-network-pipeline) (Groupint → Neo4j → Gephi → Claude) · [Image verification pipeline](https://osinter.dev/Articles/article-2-image-verification-pipeline) · [Entity resolution pipeline](https://osinter.dev/Articles/article-3-entity-resolution-pipeline) · [Obsidian OSINT workspace](https://osinter.dev/Articles/article-4-obsidian-osint-workspace).
 
 ## Консультации
